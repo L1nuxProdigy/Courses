@@ -1,0 +1,22 @@
+#!/bin/bash
+tf_file=$(ls | grep .tf$)
+
+if [ -z "$1" ]
+then
+    echo "You did not specified an argument."
+    echo "$tf_file will not be overwritten with changes and will be run as is, its current state will be copied into $tf_file.lastrun"
+    echo "running terraform apply"
+    cp $tf_file $tf_file.lastrun
+    terraform apply -var-file='vars_terraform'
+else
+    if [[ -f $1 ]]; then
+        echo "the following, $1, which you specified will be copied into $tf_file"
+        cp $1 $tf_file
+        echo "running terraform apply"
+        terraform apply -var-file='vars_terraform'
+        exit
+    fi
+    echo "the following, $1, which you specified is not found"
+    echo "terminating"
+    exit
+fi

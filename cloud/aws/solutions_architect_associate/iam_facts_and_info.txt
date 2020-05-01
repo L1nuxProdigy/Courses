@@ -1,0 +1,26 @@
+* Only attached policies effect identites and resources
+* Deny/ Allow hierarchy:
+    Explicit deny overrule all and will deny access
+    Explicit allow will allow access and "wins" default implicit deny
+    Default implicit deny is assumed if no other explicit policy was attached and will deny access
+    ** AWS will evaluate all policies and will decide what an identity/ resource may do based on the hierarchy
+* Managed policies can be created in the policeis section and be attached to many identities/ resources
+    AWS managed policies are less overhead but less flexibility
+    Customer managed policies are more overhead with more flexibility
+* Inline policies are directly under the identity/ resource and help to add exceptions to the managed policeis
+    allow more access to resources
+    add explicit denies to limit resource access
+more on the subject from AWS https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html
+
+
+* 5000 limit of IAM users
+* IAM user can be a member of up to 10 groups
+* IAM user can be associated with up to 10 managed policies (can eb changed with support allegedly)
+* IAM user can be associated with as many inline policies as possible under the restriction of maximum 2048 characters of all the policies All together
+* 1 MFA per IAM user
+* 2 access keys per IAM user
+
+
+* groups in AWS are administrative constructs to attach policies to that basically flow into thier members
+  and group IAM users but they are not "true" identites in the sense they cannot be referenced to from resource policeis
+  more on the subject from AWS https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html

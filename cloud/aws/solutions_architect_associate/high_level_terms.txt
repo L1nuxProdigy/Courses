@@ -1,0 +1,11 @@
+* The shared service model. basically AWS takes care of the cloud itself, and us take care for what we put in the cloud..
+
+* high availability - fast recovery as possible.
+* fault tolerance - can deal with faults without effecting user experience.
+
+* Recovery point objective (RPO) - the maximum time between a failure and the last successful backup that a business can tolerate.
+* Recovery time objective (RTO) - the time it takes to recover/ the maximum time a system can be down.
+
+* Scaling - the ability to of a system to scale with ever increasing demand.
+    * Vertical scaling - increase the hardware resources in the instance running the service.
+    * Horizontal scaling - increase the amount of instances for the same service, but requires the application to support this type of architecture.

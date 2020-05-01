@@ -1,0 +1,5 @@
+* allow us to expose API's with the security availability and scalability of AWS.
+* obiously the service can perform as the API itself
+* the service can frontend the requests for an existing API
+* the service support microservice architecture and monolith architectures.
+* the service support serverless architecture (can also directly interact with DynamoDB)
