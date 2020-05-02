@@ -1,0 +1,4 @@
+* Cloud formation is written in Json or YAML
+* Cloud formation template can hold up to 200 resources, can hack that with nested templates.
+* Cloud formation is uploaded to form a "Stack"
+* Stack deletion and changes reflect on its domain of resources accordingly.

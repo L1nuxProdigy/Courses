@@ -1,0 +1,9 @@
+* Buckets names must be globally unique, meaning 2 different unrelated accounts can't have the same name for a bucket.
+* Bucket name is 3 to 63 characters. Uppercase and underscores are not allowed.
+    * The name also must start with lowercase character or a number and cannot be formatted as an IP address.
+* Accounts can hold 100 buckets by default. That can be changed through a support request up to 1000.
+* Buckets are not restricted by quantity or size- unlimitted~ objects.
+* Object is a key:value pair, the key is its name, and the value is its data.
+* Object size cap is 5TB.
+
+** S3 is a global service (as infered previously), when creating a bucket a region is specified, the bucket will be replicated among the AZ's of the picked region.
