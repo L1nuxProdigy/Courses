@@ -1,0 +1,4 @@
+* Lambda is a FaaS product and invoked by events, Lambda perform actions for up to 15 minutes
+* requires a unique name in the region of the AWS account
+* Lambda requires a role (execution role)
+* code dependent on none default libraries requires uploaded as zip with all that needed.
