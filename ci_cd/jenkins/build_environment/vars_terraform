@@ -1,0 +1,2 @@
+jenkins_master = "./user_data_scripts/jenkins_master.sh"
+jenkins_node_1 = "./user_data_scripts/jenkins_node_1.sh"
